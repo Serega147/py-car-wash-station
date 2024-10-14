@@ -24,7 +24,8 @@ class CarWashStation:
         cleaning_required = self.clean_power - car.clean_mark
         rating_factor = self.average_rating
         location_factor = self.distance_from_city_center
-        price = (comfort_factor * cleaning_required * rating_factor) / location_factor
+        price = ((comfort_factor * cleaning_required * rating_factor)
+                 / location_factor)
         return round(price, 1)
 
     def wash_single_car(self, car: Car) -> None:
